@@ -42,15 +42,15 @@ print("result is : %s" %(result))
 
 
 # Miniräknare
-def askNumbers(): 
+def ask_numbers(): 
 
     first_number = int(input("enter your first number :"))
     second_number = int(input("enter your second number :"))
 
-    chooseOperation(first_number, second_number)
+    choose_operation(first_number, second_number)
 
 
-def chooseOperation(num1, num2):
+def choose_operation(num1, num2):
 
     # Jag knyter här resultaten av varje operation med det siffran användaren anger
     operations = {"1" : num1 + num2, 
@@ -58,21 +58,21 @@ def chooseOperation(num1, num2):
                   "3" : num1 * num2, 
                   "4" : num1 / num2
                   }
-    showOperations()
+    show_operations()
 
     user_operation_choice = input("type in a number of operation you want to perform: ")
-    print(showAwnser(operations[user_operation_choice]))
+    print(show_awnser(operations[user_operation_choice]))
 
 
-def showOperations():
+def show_operations():
     operation_names = ["addition", "subtraktion", "multiplication", "devision"]
     
     for index in range(1, len(operation_names) + 1):
         print("%s - %s" %(index, operation_names[index - 1]))
 
 
-def showAwnser(awnser):
+def show_awnser(awnser):
     return awnser
 
 
-askNumbers()
+ask_numbers()
